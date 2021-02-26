@@ -1,0 +1,6 @@
+set title "Insertion data graph"
+set xlabel"Time Taken"
+set ylabel"Number of values sorted"
+plot "insertion_data" with lines
+pause -1"hit any key to continue"
+

@@ -1,0 +1,6 @@
+set title "Sorting time graph"
+set ylabel"Time Taken (secs)" offset 0
+set xlabel"Data count (qty)" rotate by 0
+set xrange [1000:20000]
+set yrange [0:0.0289]
+plot "qmisb-comp.txt" using 1:5:1 with lines title "merge sort", "qmisb-comp.txt" using 1:6:1 with lines title "quick sort", "qmisb-comp.txt" using 1:2:1 with lines title "bubble sort", "qmisb-comp.txt" using 1:3:1 with lines title "selection sort", "qmisb-comp.txt" using 1:4:1 with lines title "insertion sort"

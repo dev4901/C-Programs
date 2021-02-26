@@ -1,0 +1,26 @@
+7
+2 6
+4 3
+1 8
+9 3
+4 4
+6 5
+5 11
+
+processes in order: 
+Pid - 3 
+Pid - 2 
+Pid - 0 
+Pid - 1 
+Pid - 4 
+Pid - 6 
+Pid - 5 
+
+processes in order: 
+Pid - 2 
+Pid - 0 
+Pid - 1 
+Pid - 4 
+Pid - 6 
+Pid - 5 
+Pid - 3 

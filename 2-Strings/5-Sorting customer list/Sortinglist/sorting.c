@@ -1,0 +1,132 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char first[10][12], middle[10][12], last[10][12], phone[10][10], buffer[12];
+	int i, j, count, c1, c2, c3, c4;
+	
+	printf("start entring the information about customers in the format \n");
+	printf("first_name middle_name last_name phone\n");
+	printf("To terminate the input process, enter the following:\n");
+	printf("stop the input process\n");
+
+	//input collection begins
+	for (i = 0; i < 10; i++)  
+	{
+		scanf("%s %s %s %s", first[i], middle[i], last[i], phone[i]);
+		c1 = strcmp(first[i], "stop");
+		c2 = strcmp(middle[i], "the");
+		c3 = strcmp(last[i], "input");
+		c4 = strcmp(phone[i], "process");
+		if (c1 == 0 && c2 == 0 && c3 == 0 && c4 == 0)
+			break;
+	} //input collection terminates
+	
+	printf("\n");
+	count = i;
+	
+	//bubble sort begins
+	for (i = 1; i < (count-1); i++)
+	{
+		for (j = 0; j < (count-1); j++)
+		{
+			//(i) comparing the values
+			c1 = strcmp(last[j], last[j+1]);
+			c2 = strcmp(first[j], first[j+1]);
+			c3 = strcmp(middle[j], middle[j+1]);
+			c4 = strcmp(phone[j], phone[j+1]);
+			
+			//(ii) checking and replacing
+			if (c1 >= 0)
+			{
+				if (c1 > 0)
+				{
+					strcpy(buffer, last[j]);
+					strcpy(last[j], last[j + 1]);
+					strcpy(last[j + 1], buffer);
+					strcpy(buffer, first[j]);
+					strcpy(first[j], first[j + 1]);
+					strcpy(first[j + 1], buffer);
+					strcpy(buffer, middle[j]);
+					strcpy(middle[j], middle[j + 1]);
+					strcpy(middle[j + 1], buffer);
+					strcpy(buffer, phone[j]);
+					strcpy(phone[j], phone[j + 1]);
+					strcpy(phone[j + 1], buffer);
+					continue;
+				}
+				else
+				{
+					if (c2 >= 0)
+					{
+						if (c2>0)
+						{
+							strcpy(buffer, last[j]);
+							strcpy(last[j], last[j + 1]);
+							strcpy(last[j + 1], buffer);
+							strcpy(buffer, first[j]);
+							strcpy(first[j], first[j + 1]);
+							strcpy(first[j + 1], buffer);
+							strcpy(buffer, middle[j]);
+							strcpy(middle[j], middle[j + 1]);
+							strcpy(middle[j + 1], buffer);
+							strcpy(buffer, phone[j]);
+							strcpy(phone[j], phone[j + 1]);
+							strcpy(phone[j + 1], buffer);
+							continue;
+						}
+						else
+						{
+							if (c3 >= 0)
+							{
+								if (c3 > 0)
+								{
+									strcpy(buffer, last[j]);
+									strcpy(last[j], last[j + 1]);
+									strcpy(last[j + 1], buffer);
+									strcpy(buffer, first[j]);
+									strcpy(first[j], first[j + 1]);
+									strcpy(first[j + 1], buffer);
+									strcpy(buffer, middle[j]);
+									strcpy(middle[j], middle[j + 1]);
+									strcpy(middle[j + 1], buffer);
+									strcpy(buffer, phone[j]);
+									strcpy(phone[j], phone[j + 1]);
+									strcpy(phone[j + 1], buffer);
+									continue;
+								}
+								else
+									continue;
+								
+							}
+							else
+								continue;
+							
+						}
+					}
+					else
+						continue;
+					
+				}
+			}
+			
+			else
+				continue;
+			
+		}
+	}
+	//bubble sort ends
+	
+	
+	printf("\nThe result is - \n\n");
+	
+	//printing begins
+	for ( i = 0; i < (count); i++)
+	{
+		printf("%s,%c.%c %s\n", last[i], first[i][0], middle[i][0], phone[i]);
+	}
+	//printing ends
+
+}

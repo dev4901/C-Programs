@@ -1,0 +1,5 @@
+set title "Insertion and Bubble sort time graph"
+set ylabel"Time Taken (secs)"
+set xlabel"Number of values sorted (qty)"
+plot "insert-bub-check" using 1:2 with linespoints title "insertion data", "insert-bub-check" using 1:3 with linespoints title "bubble data"
+

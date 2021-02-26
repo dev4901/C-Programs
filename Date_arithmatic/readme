@@ -1,0 +1,20 @@
+Name - Date arithmatic program
+
+Description - One can operate certain arithmatic operations on dates using this programs, viz. 
+1. Validate a date - whether the string you've entered is a valid date or not
+2. Give the immediate next date - will give you the date of the immediate next day of the date you've entered.
+3. Add days - enter a date and number of days you want to add to it, it'll return the date you get after that much days from your date.
+4. Subtract days - enter a date and the number of days you want to go behind from it, it'll return the respective date that comes before the respective days.
+5. find which date is ahead - enter 2 dates, and it'll tell you which date of the 2 comes after the other.
+
+Installation - 
+Ubuntu - 
+install gcc compiler using command 
+ " sudo apt-get install build-essential "
+ 
+now go to the folder where you kept the c file  and then type the command
+
+" gcc date_-arithmatic.c "
+" ./a.out "
+
+  

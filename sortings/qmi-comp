@@ -1,0 +1,5 @@
+set title "Insertion and Bubble sort time graph"
+set ylabel"Time Taken (secs)"
+set xlabel"Number of values sorted (qty)"
+set yrange [0:0.015]
+plot "qmisb-comp.txt" using 1:5 with lines title "merge sort", "qmisb-comp.txt" using 1:6 with lines title "quick sort", "qmisb-comp.txt" using 1:4 with lines title "insertion sort"

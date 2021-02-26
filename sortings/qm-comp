@@ -1,0 +1,4 @@
+set title "Quick and Merge sort time graph"
+set ylabel"Time Taken (secs)"
+set xlabel"Number of values sorted (qty)"
+plot "qmisb-comp.txt" using 1:5 with lines title "merge sort", "qmisb-comp.txt" using 1:6 with lines title "quick sort"
